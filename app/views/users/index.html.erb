@@ -1,2 +1,12 @@
-<h1>User Index WOW!</h1>
-<p>Find me in app/views/user/index.html.erb</p>
+<h1>You know you're cool if you're a shouter!!!</h1>
+
+<ul>
+	<% @users.each do |u| %>
+	<li>
+		<%= link_to u.username, u %>
+	</li>
+	<% end %>
+
+</ul>
+
+<%= render "marketing" %>

@@ -1,2 +1,9 @@
-<h1>User#show</h1>
-<p>Find me in app/views/user/show.html.erb</p>
+<h1> <%= @user.username %> is a Shouter!!!</h1>
+<ul>
+	<li>screen name: <%= @user.username %> </li>
+	<li>email: <%= mail_to @user.email %> </li>
+</ul>
+
+<%= link_to "Edit this User", edit_user_path(@user) %>
+
+<%= render :partial => "marketing" %>

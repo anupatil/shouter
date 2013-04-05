@@ -1,8 +1,4 @@
 <h1>Got Something to SHOUT</h1>
 <h2>Sign up NOW and JOIN the fray!!!</h2>
 
-<%= form_for @user, :url =>{:action=>"create"} do|user_form| %>
-<%= user_form.label(:username, "Screen Name") %>
-<%= user_form.text_field(:username) %>
-<%= user_form.submit("Sign Up") %>
-<%end%>
+<%= render :partial => "form", :locals => {:button_label => "Sign Up"} %>
